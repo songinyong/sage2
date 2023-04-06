@@ -1,0 +1,142 @@
+/*
+ * Styling for the Code Snippets Input elements
+ */
+
+.snippetsInputDiv {
+    padding: 5px;
+    font-family: monospace;
+    box-sizing: initial;
+}
+
+.snippetsInputLabel {
+    min-width: 75px;
+    margin: 6px 0;
+    font-weight: bold;
+}
+
+.snippetsInputDiv .checkboxInput {
+    border: 2px solid black;
+    background: gray;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.snippetsInputDiv .checkboxInput:after {
+    content: "\2714";
+    color: black;
+    visibility: hidden;
+}
+
+/* Show the checkmark when checked */
+
+.snippetsInputDiv .checkboxInput.checked:after {
+    visibility: visible;
+}
+
+.snippetsInputDiv .checkboxInput.checked {
+    border: 2px solid black;
+    background: #66a61e;
+}
+
+.snippetsInputDiv .checkboxInput.hovered {
+    background: #a6d854;
+}
+
+.snippetsInputDiv .radioInput {
+    border: 2px solid black;
+    background: gray;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Create the dot/indicator (hidden when not checked) */
+
+.snippetsInputDiv .radioInput:after {
+    content: "\2022";
+    visibility: hidden;
+    color: black;
+}
+
+/* Show the dot when checked */
+
+.snippetsInputDiv .radioInput.selected:after {
+    visibility: visible;
+}
+
+.snippetsInputDiv .radioInput.selected {
+    border: 2px solid black;
+    background: #1b9e77;
+}
+
+.snippetsInputDiv .radioInput.hovered {
+    background: #66c2a5;
+}
+
+/* Snippets Text Input */
+
+/* ===================== */
+
+.snippetsInputDiv .textInput {
+    width: 200px;
+    height: 24px;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+}
+
+.snippetsInputDiv .textInputGo {
+    position: relative;
+    border-radius: 5px;
+    border: 1.25px solid rgba(0, 0, 0, 0.5);
+    background: #e6f5c9;
+    display: inline-block;
+    text-align: center;
+    font-family: Arimo, Helvetica, sans-serif;
+}
+
+.snippetsInputDiv .textInputGo.hovered {
+    background: #ccebc5;
+}
+
+.snippetsInputDiv .textInputGo:after {
+    content: "OK";
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 33%;
+}
+
+.snippetsInputDiv .rangeInput {
+    display: inline-block;
+    width: 185px;
+    position: relative;
+    border: 2px solid black;
+    background: gray;
+    margin: 0 5px;
+    border-radius: 3px;
+    /* box-shadow: inset 0 0 10px 2px rgba(0,0,0,0.5) */
+}
+
+.snippetsInputDiv .rangeInput .rangeInputHandle {
+    background: white;
+    width: 10px;
+    border-radius: 3px;
+    position: absolute;
+    border: 1px solid black;
+    margin-top: -0.5px;
+    box-shadow: inset 0 0 2px 1.25px rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+}
+
+.snippetsInputDiv .rangeInput .rangeInputOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

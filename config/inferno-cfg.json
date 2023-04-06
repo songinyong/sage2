@@ -1,0 +1,118 @@
+{
+	name: "Cybercommons2",
+	host: "inferno.evl.uic.edu",
+	port: 443,
+	index_port: 80,
+	url: "http://bit.do/cyberc",
+	background: {
+		image: {
+			url: "images/background/chicago_skyline_iridium.jpg",
+			style: "fit"
+		},
+		watermark: {
+			svg: "images/EVL-logo.svg",
+			color: "rgba(255, 255, 255, 0.2)"
+		},
+		clip: true
+	},
+	ui: {
+		clock: 12,
+		show_url: true,
+		show_version: true,
+		maxWindowWidth : 8196,
+		maxWindowHeight : 8196,
+		noDropShadow: true
+	},
+	resolution: {
+		width: 8160,
+		height: 2304
+		// height: 2190
+	},
+	layout: {
+		rows: 1,
+		columns: 1
+	},
+	displays: [
+		{
+			row: 0,
+			column: 0
+		}
+	],
+	alternate_hosts: [
+		"localhost",
+		"127.0.0.1",
+		"131.193.183.170"
+	],
+	remote_sites: [
+		{
+			name: "CAVE2",
+			host: "lyra.evlrn.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "LAVA",
+			host: "pele.manoa.hawaii.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "ANL",
+			host: "display3d.mcs.anl.gov",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Green Room",
+			host: "mesaverde.evlrn.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "IceWall",
+			host: "thor.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Arthur",
+			host: "nishimoto.evl.uic.edu",
+			port: 9090,
+			secure: true
+		}
+	],
+	experimental: {
+		omicron: {
+			enable: true,
+			
+			// Port SAGE will listen for a oinputserver connection
+			msgPort: 28000,
+			
+			// If specified, SAGE will actively attempt to connect to
+			// an oinputserver on the specified IP and data port
+			//inputServerIP: "131.193.183.207", // OMGTracker (Wired)
+			inputServerIP: "131.193.76.94", // OMGTracker (Wireless)
+			dataPort: 30005,
+			
+			eventDebug: false,
+			
+			enableTouch: true,
+			enableMocap: false,
+			enableWand: false,
+			
+			style: "Touch", // Display as "Touch" or "Pointer"
+			interactionMode: "App", // "Window" or "App"
+
+			// Touch gestures
+			touchOffset: [ 12, 5 ], // in pixels
+			zoomGestureScale: 2000,
+			acceleratedDragScale: 3,
+			gestureDebug: false,
+		}
+	},
+	dependencies: {
+		ImageMagick: "bin/",
+		FFMpeg: "bin/"
+	}
+}
+

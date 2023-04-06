@@ -1,0 +1,18 @@
+{
+	"main_script": "videoCapture.js",
+	"icon": "videoCapture.png",
+	"width": 1280,
+	"height": 720,
+	"resize": "free",
+	"animation": false,
+	"dependencies": [
+	],
+	"load": {
+	},
+	"title": "videoCapture",
+	"version": "1.0.0",
+	"description": "SAGE2 application USB video capture",
+	"keywords": [ "sage2", "video",  "USB", "capture" ],
+	"author": "Luc Renambot <renambot@gmail.com>",
+	"license": "SAGE2-Software-License"
+}

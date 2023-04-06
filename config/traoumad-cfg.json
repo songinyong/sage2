@@ -1,0 +1,120 @@
+/*
+	configuration for traoumad - luc's machine
+*/
+{
+	// nickname for UI elements
+	name: "Luc's office",
+	// hostname of the web server
+	host: "traoumad.evl.uic.edu",
+	// port of the HTTPS server: 443 for default
+	port: 443,
+	// port of the HTTP public page
+	index_port: 80,
+	// URL: optional, used instead of hostname for display
+	url: "http://bit.do/luc2",
+	background: {
+		color: "#585757",
+		image: {
+			url: "images/background/evl1.jpg",
+			// url: "images/background/dbgrid.png",
+			style: "tile"
+		},
+		watermark: {
+			// svg: "images/EVL-LAVA.svg",
+			// color: "rgba(255, 255, 255, 0.25)"
+		}
+	},
+	security: {
+		secureProtocol: "TLSv1_2_method",
+		enableCSP: true,
+		enableHSTS: true,
+		enableExpectCertificateTransparency: true,
+		enableReferrerPolicy: true,
+		enableFeaturePolicy: true
+	},
+	audio: {
+		initialVolume: 7
+	},
+	ui: {
+		clock: 24,
+		show_url: true,
+		show_version: true,
+		noDropShadow: true,
+		auto_hide_ui: true,
+		auto_hide_delay: 30,
+		maxWindowWidth : 8192,
+		maxWindowHeight : 8192,
+		auto_scale_ui: true,
+		calculate_viewing_distance: true
+	},
+	resolution: {
+		width: 1920,
+		height: 1080
+	},
+	layout: {
+		rows: 1,
+		columns: 2
+	},
+	dimensions: {
+		// dimensions of one tile (can be overriden in displays section)
+		tile_width:  1.205,  // in meter, pixel area
+		tile_height: 0.680,  // in meter, pixel area
+		tile_borders: { left: 0.005, right: 0.005, bottom: 0.0, top: 0.0 }, // mullions in meter
+		// prefered or common viewing distance to calculate UI sizes
+		viewing_distance: 1.0	// in meter
+	},
+	displays: [
+		{
+			row: 0,
+			column: 0,
+			width: 1,
+			height: 1
+		},
+		{
+			row: 0,
+			column: 1,
+			width: 1,
+			height: 1
+		}
+	],
+	experimental: {
+		vissnippets: true
+	},
+	alternate_hosts: [
+		"localhost",
+		"127.0.0.1"
+	],
+	remote_sites: [
+		{
+			name: "Mesaverde",
+			host: "mesaverde.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Cybercommons",
+			host: "iridium.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "IceWall",
+			host: "thor.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "TestServer",
+			host: "sage2server.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "CAVE2",
+			host: "lyra.evl.uic.edu",
+			port: 443,
+			secure: true,
+			password: "evl123"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>SAGE2 drawing with Wacom</title>
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script type="text/license">
+			// SAGE2 is available for use under the SAGE2 Software License
+			//
+			// University of Illinois at Chicago's Electronic Visualization Laboratory (EVL)
+			// and University of Hawai'i at Manoa's Laboratory for Advanced Visualization and
+			// Applications (LAVA)
+			//
+			// See full text, terms and conditions in the LICENSE.txt included file
+			//
+			// Copyright (c) 2014
+		</script>
+
+		<script src="lib/kinetic-v5.1.0.min.js"></script>
+		<script src="lib/simplify.js"></script>
+		<script src="src/websocket.io.js"></script>
+		<script src="src/SAGE2_runtime.js"></script>
+		<script src="src/SAGE2_DrawingApp.js"></script>
+
+	</head>
+
+	<body onload="SAGE2_init()">
+
+	<object id="wtPlugin" type="application/x-wacomtabletplugin" WIDTH=1 HEIGHT=1 style="position:absolute; left:100px; top:100px">
+	</object>
+
+	<h2>SAGE2 drawing</h2>
+		<div id="toolbar" style="width:1280px;height:50px">
+		</div>
+		<div id="canvas" style="width:1280px;height:720px">
+		</div>
+
+	<h2>Information</h2>
+		<h4 id="pluginVersion">Plugin version:</h4>
+		<h4 id="pluginInformation">Plugin information:</h4>
+
+	</body>
+</html>

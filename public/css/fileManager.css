@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* SAGE2 is available for use under the SAGE2 Software License
+ *
+ * University of Illinois at Chicago's Electronic Visualization Laboratory (EVL)
+ * and University of Hawai'i at Manoa's Laboratory for Advanced Visualization and
+ * Applications (LAVA)
+ *
+ * See full text, terms and conditions in the LICENSE.txt included file
+ *
+ * Copyright (c) 2014
+ */
+
+/* CSS Document */
+
+.webix_view .webix_tree_file:before {
+	content:"";
+}
+
+.webix_view .webix_tree_file.webix_tree_folder {
+	background-image: url("../lib/webix/icons/folder.png");
+	background-position: 0 4px;
+}
+
+.webix_view .webix_tree_file.webix_tree_open {
+	background-image: url("../lib/webix/icons/folder_open.png");
+	background-position: 0 4px;
+}
+
+.webix_view .webix_tree_file.webix_tree_search {
+	background-image: url("../lib/webix/icons/rss.png");
+	background-position: 0 4px;
+}
+
+.webix_view .webix_tree_file.webix_tree_home {
+	background-image: url("../lib/webix/icons/home.png");
+	background-position: 0 4px;
+}
+
+.webix_property_label_line {
+	background: #D3E3EF;
+	font-family: Arimo, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #4A4A4A;
+	height: 34px;
+	line-height: 34px;
+}
+
+.webix_tree_item:hover {
+	color: black;
+	background: #F4F5F9;
+}
+.webix_tree .webix_tree_item.webix_selected {
+	color: white;
+	background-color: white;
+}
+.webix_tree .webix_tree_item.webix_selected  span {
+    padding: 4px 4px 4px 4px;
+    margin-left: -4px;
+	color: white;
+	background-color: #27AE60;
+}
+
+/* Colorboard */
+.webix_color_selector {
+	border-color: #000000;
+	border-style: solid;
+}
+
+/* Checkbox */
+.webix_custom_checkbox {
+	vertical-align: center;
+	background-color: lightgray;
+}

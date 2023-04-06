@@ -1,0 +1,318 @@
+@charset "UTF-8";
+.json-summary-wrapper {
+  white-space: pre-wrap;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.light .json-summary-wrapper {
+  background: #fdf6e3;
+  color: #073642;
+  border: 1px solid #586e75;
+}
+.dark .json-summary-wrapper {
+  background: #282c34;
+  color: #abb2bf;
+  border: 1px solid #586e75;
+}
+.night-owl .json-summary-wrapper {
+  background: #011627;
+  color: #d7dbe0;
+  border: 1px solid #637777;
+}
+.monokai .json-summary-wrapper {
+  background: #272822;
+  color: #f8f8f2;
+  border: 1px solid #75715e;
+}
+.abyss .json-summary-wrapper {
+  background: #181f2f;
+  color: #bbbbbb;
+  border: 1px solid #384887;
+}
+.json-summary-wrapper .json-summary {
+  font-family: monospace;
+}
+.json-summary-wrapper .json-summary-checkbox {
+  display: inline;
+  position: relative;
+  cursor: pointer;
+  padding-left: 10px;
+  margin-left: 2px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.json-summary-wrapper .json-summary-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  height: 12px;
+  width: 12px;
+  line-height: 10px;
+  text-align: center;
+}
+.light .json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker {
+  color: #93a1a1;
+  border: 1px solid #93a1a1;
+}
+.dark .json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker {
+  color: #abb2bf;
+  border: 1px solid #abb2bf;
+}
+.night-owl .json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker {
+  color: #d7dbe0;
+  border: 1px solid #d7dbe0;
+}
+.monokai .json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker {
+  color: #f8f8f2;
+  border: 1px solid #f8f8f2;
+}
+.abyss .json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker {
+  color: #bbbbbb;
+  border: 1px solid #bbbbbb;
+}
+.json-summary-wrapper .json-summary-checkbox .json-summary-checkboxmarker::before {
+  content: "+";
+}
+.json-summary-wrapper .json-summary-checkbox.checked > .json-summary-checkboxmarker::before {
+  content: "–";
+}
+.json-summary-wrapper .json-summary-checkbox.checked + .json-summary-layer > .json-summary-child {
+  display: inline;
+}
+.json-summary-wrapper .json-summary-checkbox.checked + .json-summary-layer > .json-summary-keys {
+  display: none;
+}
+.json-summary-wrapper .json-summary-layer {
+  display: inline;
+}
+.json-summary-wrapper .json-summary-layer .json-summary-keys {
+  display: none;
+  /* display: inline; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.light .json-summary-wrapper .json-summary-layer .json-summary-keys {
+  color: #dc322f;
+}
+.dark .json-summary-wrapper .json-summary-layer .json-summary-keys {
+  color: #ef596f;
+}
+.night-owl .json-summary-wrapper .json-summary-layer .json-summary-keys {
+  color: #ff5874;
+}
+.monokai .json-summary-wrapper .json-summary-layer .json-summary-keys {
+  color: #ff6188;
+}
+.abyss .json-summary-wrapper .json-summary-layer .json-summary-keys {
+  color: #ddbb88;
+}
+.json-summary-wrapper .json-summary-layer > .json-summary-child {
+  display: none;
+}
+.json-summary-wrapper .json-summary-type {
+  cursor: help;
+}
+.light .json-summary-wrapper .json-summary-type {
+  color: #2aa198;
+}
+.dark .json-summary-wrapper .json-summary-type {
+  color: #e5c07b;
+}
+.night-owl .json-summary-wrapper .json-summary-type {
+  color: #ecc48d;
+}
+.monokai .json-summary-wrapper .json-summary-type {
+  color: #ffd866;
+}
+.abyss .json-summary-wrapper .json-summary-type {
+  color: #f280d0;
+}
+.light .json-summary-wrapper .json-summary-type.json-summary-type-string {
+  color: #859900;
+}
+.dark .json-summary-wrapper .json-summary-type.json-summary-type-string {
+  color: #89ca78;
+}
+.night-owl .json-summary-wrapper .json-summary-type.json-summary-type-string {
+  color: #addb67;
+}
+.monokai .json-summary-wrapper .json-summary-type.json-summary-type-string {
+  color: #a9dc76;
+}
+.abyss .json-summary-wrapper .json-summary-type.json-summary-type-string {
+  color: #22aa44;
+}
+.json-summary-wrapper .json-summary-type:hover + .json-summary-value {
+  display: inline;
+}
+.json-summary-wrapper .json-summary-type:hover + .json-summary-value + .json-summary-range {
+  display: inline;
+}
+.json-summary-wrapper .json-summary-value {
+  display: none;
+  margin-left: 4px;
+  font-style: italic;
+}
+.light .json-summary-wrapper .json-summary-value {
+  color: #586e75;
+}
+.dark .json-summary-wrapper .json-summary-value {
+  color: #abb2bf;
+}
+.night-owl .json-summary-wrapper .json-summary-value {
+  color: #637777;
+}
+.monokai .json-summary-wrapper .json-summary-value {
+  color: #75715e;
+}
+.abyss .json-summary-wrapper .json-summary-value {
+  color: #384887;
+}
+.json-summary-wrapper .json-summary-value::before {
+  content: "(";
+}
+.json-summary-wrapper .json-summary-value::after {
+  content: ")";
+}
+.json-summary-wrapper .json-summary-value.json-summary-value-string::before {
+  content: "('";
+}
+.json-summary-wrapper .json-summary-value.json-summary-value-string::after {
+  content: "')";
+}
+.json-summary-wrapper .json-summary-range {
+  display: none;
+  margin-left: 4px;
+  font-style: italic;
+}
+.light .json-summary-wrapper .json-summary-range {
+  color: #586e75;
+}
+.dark .json-summary-wrapper .json-summary-range {
+  color: #abb2bf;
+}
+.night-owl .json-summary-wrapper .json-summary-range {
+  color: #637777;
+}
+.monokai .json-summary-wrapper .json-summary-range {
+  color: #75715e;
+}
+.abyss .json-summary-wrapper .json-summary-range {
+  color: #384887;
+}
+.json-summary-wrapper .json-summary-range::before {
+  content: "val: ";
+}
+.json-summary-wrapper .json-summary-range.json-summary-range-string::before {
+  content: "len: ";
+}
+.light .json-summary-wrapper .json-summary-name {
+  color: #dc322f;
+}
+.dark .json-summary-wrapper .json-summary-name {
+  color: #ef596f;
+}
+.night-owl .json-summary-wrapper .json-summary-name {
+  color: #ff5874;
+}
+.monokai .json-summary-wrapper .json-summary-name {
+  color: #ff6188;
+}
+.abyss .json-summary-wrapper .json-summary-name {
+  color: #ddbb88;
+}
+.light .json-summary-wrapper .json-summary-length {
+  color: #268bd2;
+}
+.dark .json-summary-wrapper .json-summary-length {
+  color: #61afef;
+}
+.night-owl .json-summary-wrapper .json-summary-length {
+  color: #82aaff;
+}
+.monokai .json-summary-wrapper .json-summary-length {
+  color: #78dce8;
+}
+.abyss .json-summary-wrapper .json-summary-length {
+  color: #9966b8;
+}
+.light .json-summary-wrapper .json-summary-circular {
+  color: #6c71c4;
+}
+.dark .json-summary-wrapper .json-summary-circular {
+  color: #d55fde;
+}
+.night-owl .json-summary-wrapper .json-summary-circular {
+  color: #c792ea;
+}
+.monokai .json-summary-wrapper .json-summary-circular {
+  color: #ab9df2;
+}
+.abyss .json-summary-wrapper .json-summary-circular {
+  color: #2277ff;
+}
+.json-summary-wrapper .json-summary-bar {
+  width: 25px;
+  height: 10px;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 0 2px 2px 0;
+  cursor: help;
+}
+.light .json-summary-wrapper .json-summary-bar {
+  background: #fdf6e3;
+  border: 1px solid #586e75;
+}
+.dark .json-summary-wrapper .json-summary-bar {
+  background: #282c34;
+  border: 1px solid #586e75;
+}
+.night-owl .json-summary-wrapper .json-summary-bar {
+  background: #011627;
+  border: 1px solid #637777;
+}
+.monokai .json-summary-wrapper .json-summary-bar {
+  background: #272822;
+  border: 1px solid #75715e;
+}
+.abyss .json-summary-wrapper .json-summary-bar {
+  background: #181f2f;
+  border: 1px solid #384887;
+}
+.json-summary-wrapper .json-summary-percentage {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.light .json-summary-wrapper .json-summary-percentage {
+  background: #268bd2;
+}
+.dark .json-summary-wrapper .json-summary-percentage {
+  background: #61afef;
+}
+.night-owl .json-summary-wrapper .json-summary-percentage {
+  background: #82aaff;
+}
+.monokai .json-summary-wrapper .json-summary-percentage {
+  background: #78dce8;
+}
+.abyss .json-summary-wrapper .json-summary-percentage {
+  background: #2277ff;
+}
+
+/*# sourceMappingURL=summarizer.css.map */

@@ -1,0 +1,113 @@
+{
+	"name": "SAGE2",
+	"version": "5.0.0",
+	"date": "2015-11-02",
+	"private": true,
+	"description": "A cluster-based html viewer used for displaying elements across multiple browser windows",
+	"keywords": [
+		"SAGE",
+		"browser",
+		"collaboration"
+	],
+	"author": "UIC EVL <evl.avatar@gmail.com>",
+	"contributors": [
+		{
+			"name": "Thomas Marrinan",
+			"email": "thomas.j.marrinan@gmail.com"
+		},
+		{
+			"name": "Jillian Aurisano",
+			"email": "jillian.aurisano@gmail.com"
+		},
+		{
+			"name": "Arthur Nishimoto",
+			"email": "arthur.nishimoto@gmail.com"
+		},
+		{
+			"name": "Victor Mateevitsi",
+			"email": "mvictoras@gmail.com"
+		},
+		{
+			"name": "Krishna Bharadwaj",
+			"email": "krishnaknbharadwaj@gmail.com"
+		},
+		{
+			"name": "Dylan Kobayashi",
+			"email": "dylank@hawaii.edu"
+		},
+		{
+			"name": "Luc Renambot",
+			"email": "renambot@gmail.com"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/sage2/sage2/"
+	},
+	"dependencies": {
+		"chalk": "^4",
+		"cheerio": "latest",
+		"color": "^4",
+		"commander": "^8",
+		"debug": "^4",
+		"decompress-zip": "latest",
+		"electron": "^10",
+		"electron-squirrel-startup": "latest",
+		"express": "^4.18.2",
+		"fluent-ffmpeg": "^2",
+		"formidable": "^1",
+		"fsmonitor": "latest",
+		"gm": "^1",
+		"imageinfo": "^1",
+		"json5": "^2",
+		"jszip": "^3",
+		"mime": "^3",
+		"mv": "^2",
+		"node-demux": "git+https://github.com/songinyong/node-demux-sage2",
+		"node-json-db": "1.4.1",
+		"node-pre-gyp": "latest",
+		"normalizeurl": "^1",
+		"qr-image": "^3",
+		"rbush": ">=2",
+		"request": "^2",
+		"rimraf": "^3",
+		"sanitize-filename": "^1",
+		"sanitizer": "latest",
+		"semver": "latest",
+		"sprint": "latest",
+		"strip-ansi": "^6",
+		"systeminformation": "4.23.1",
+		"underscore": "^1.13.6",
+		"websocketio": "https://github.com/songinyong/websocketio",
+		"workbox-build": "latest",
+		"ws": "^7",
+		"ytdl-core": "^4"
+	},
+	"optionalDependencies": {
+		"bufferutil": "latest",
+		"utf-8-validate": "^5"
+	},
+	"devDependencies": {
+		"grunt": "latest",
+		"grunt-cli": "latest",
+		"grunt-eslint": "latest",
+		"grunt-contrib-yuidoc": "latest",
+		"grunt-prompt": "latest",
+		"nodemon": "latest",
+		"kthxbai": "latest"
+	},
+	"engines": {
+		"node": ">=8.x"
+	},
+	"scripts": {
+		"start": "node server.js -l",
+		"workbox": "node generate-service-worker.js",
+		"monitor": "nodemon -e json,js,html -I -L -i public/uploads -i public/service-worker.js server.js -l",
+		"lint": "grunt eslint",
+		"doc": "grunt yuidoc",
+		"newapp": "grunt newapp",
+		"test": "grunt all",
+		"electron": "electron electron.js -s http://localhost:9292 -d 0"
+	},
+	"license": "SEE LICENSE IN LICENSE.txt"
+}

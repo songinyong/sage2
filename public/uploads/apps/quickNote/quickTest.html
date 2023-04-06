@@ -1,0 +1,29 @@
+
+
+
+
+
+<head>
+
+</head>
+
+<body>
+
+	<textarea id="ta_input"></textarea>
+	<button id="btn_convert" onclick="convertToMarkdown()">Convert</button>
+
+	<div id="convertedArea">
+
+	</div>
+
+
+	<script src="showdown.min.js"></script>
+	<script>
+
+		var showdown_converter = new showdown.Converter();
+		function convertToMarkdown() {
+			convertedArea.innerHTML = showdown_converter.makeHtml(ta_input.value);
+		}
+	
+	</script>
+</body>

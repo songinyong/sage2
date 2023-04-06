@@ -1,0 +1,157 @@
+ /*
+	default configuration of the server - Windows
+*/
+{
+	name: "Endeavour",
+	host: "nishimoto.evl.uic.edu",
+	port: 9090,
+	index_port: 9292,
+	background: {
+		color: "#333333",
+		watermark: {
+			svg: "images/EVL-logo.svg",
+			color: "rgba(255, 255, 255, 0.5)"
+		},
+		image: {
+			url: "user/images/background/kamping_4k.jpg",
+			style: "tile"
+		},
+	},
+	ui: {
+		clock: 12,
+		show_version: true,
+		show_url: true,
+		maxWindowWidth: 8192,
+		maxWindowHeight: 8192,
+		noDropShadow: true,
+		// widgetControlSize: 30,
+		auto_scale_ui: true
+	},
+	dimensions: {
+		// dimensions of one tile (can be overriden in displays section)
+		// Basic
+		tile_diagonal_inches: 29.75, // in inches, screen size/pixel area
+		aspect_ratio: "16:10", // default: 16:9
+
+		// Advanced
+		tile_width: 0.64,  // in meter, pixel area (overrides aspect_ratio and diagonal)
+		tile_height: 0.4,  // in meter, pixel area (overrides aspect_ratio and diagonal)
+
+		tile_borders: [ 0.002, 0.002, 0.002, 0.002 ], // mullions in meter, left, right, bottom, top
+
+		// prefered or common viewing distance to calculate UI sizes
+		viewing_distance: 0.71	// in meters
+	},
+	resolution: {
+		//width: 3840,
+		//height: 2160
+		width: 2560,
+		height: 1600
+		//width: 1366,
+		//height: 768
+	},
+	layout: {
+		rows: 1,
+		columns: 1
+	},
+	displays: [
+		{
+			row: 0,
+			column: 0
+		}
+	],
+	alternate_hosts: [
+		"127.0.0.1"
+	],
+	remote_sites: [
+		{
+			name: "EVL Upstairs",
+			host: "inferno.evl.uic.edu",
+			port: 443,
+			secure: true,
+		},
+		{
+			name: "Continuum Wall",
+			host: "canopus.evl.uic.edu",
+			port: 443,
+			secure: true,
+		},
+		{
+			name: "CAVE2",
+			host: "orion-win.evl.uic.edu",
+			port: 443,
+			secure: true,
+		},
+		{
+			name: "CAVE2-Wall",
+			host: "orion.evl.uic.edu",
+			port: 443,
+			secure: true
+		}
+	],
+	// for experimental features: true/false
+	
+	experimental: {
+		omicron: {
+			enable: false,
+			
+			// Port SAGE will listen for a oinputserver connection
+			msgPort: 28000,
+			
+			// If specified, SAGE will actively attempt to connect to
+			// an oinputserver on the specified IP and data port
+			inputServerIP: "localhost",
+			dataPort: 30005,
+			
+			eventDebug: false,
+			
+			enableTouch: true,
+			enableWand: true,
+			enableMocap: true,
+						
+			style: "Pointer", // Display as "Touch" or "Pointer"
+			interactionMode: "Window", // "Window" or "App"
+
+			// Touch gestures
+			gestureDebug: false,
+			touchOffset: [ 0, -25 ], // in pixels
+			enableGestures: true,
+			
+			acceleratedDragScale: 1,
+			
+			enableDoubleClickMaximize: true,
+			enableThreeFingerRightClick: false,
+			
+			enableTwoFingerWindowDrag: false,
+			zoomToMoveGestureMinimumDistance: 100,
+			
+			enableTwoFingerZoom: true,
+			zoomGestureScale: 2000,
+			
+			enableFiveFingerCloseApp: true,
+			
+			appsExcludedFromTouchInteraction:
+			[
+				"Webview",
+				"googlemaps",
+				"zoom"
+			],
+			
+			// Wand
+			wandNames:
+			{
+				"1": {label: "Wand (Config Named)", color: "rgba(50, 250, 150, 1.0)"}
+			},
+			
+			// Advanced
+			moveEventLimit: 100,				// if 100, sends 1/100 of move events received
+			enableStuckTouchDetection: true,
+			nonCriticalEventDelay: 10
+		}
+	},
+	
+	dependencies: {
+		ImageMagick: "",
+		FFMpeg: "C:/Dev/ffmpeg-win64-shared/bin/"
+    }
+}

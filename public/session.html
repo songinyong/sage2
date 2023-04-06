@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0, user-scalable=1" />
+
+<title>SAGE2 Session</title>
+
+<script type="text/license">
+	// SAGE2 is available for use under the SAGE2 Software License 
+	//      
+	// University of Illinois at Chicago's Electronic Visualization Laboratory (EVL)
+	// and University of Hawai'i at Manoa's Laboratory for Advanced Visualization and
+	// Applications (LAVA)
+	//      
+	// See full text, terms and conditions in the LICENSE.txt included file
+	//      
+	// Copyright (c) 2015
+</script>
+
+<!-- SAGE2 code -->
+<script async src="src/md5.js"></script>
+<script async src="src/SAGE2_runtime.js"></script>
+<script async src="src/SAGE2_Session.js"></script>
+
+<link rel="stylesheet" type="text/css" href="admin/style.css" media="screen">
+
+<style>
+h2 {
+	color:  #DDDDDD;
+}
+
+/* Press button */
+.button_session {
+	padding: 4px 4px 4px 4px;
+	margin: 10px;
+	width: 20%;
+	border-radius: 5px;
+	border: solid 2px #ADD8E6;
+	font-family: Arimo, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #FFFFFF;
+	background-color: #333333;
+	vertical-align: baseline;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.button_session:hover {
+	background-color: #444444;
+	outline: none;
+}
+/* Password box */
+input {
+	padding: 4px 4px 4px 4px;
+	margin: 5px 5px 5px 12px;
+	font-size: 1em;
+	text-indent: 3px;
+	color: #666666;
+}
+input:focus {
+	outline: #ADD8E6 solid;
+}
+</style>
+
+</head>
+
+<body>
+
+	<header>
+		<h1>SAGE2 Session</h1>
+	</header>
+
+	<main>
+
+		<section class="siteType">
+			<h2>The meeting held at this SAGE2 wall is currently locked.</h2>
+		</section>
+
+		<section class="siteType">
+			<h2>Please enter the meeting password:</h2>
+			<input type="password" id="sessionValue" size="40" tabindex="1">
+			<button class="button_session" type="button" id="enterButton" onclick="buttonSubmit()">
+				Enter
+			</button>
+		</section>
+
+		<section>
+			&nbsp;
+		</section>
+	</main>
+
+
+</body>
+</html>

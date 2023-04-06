@@ -1,0 +1,31 @@
+{
+    "rbac": [
+        {
+            "roles": [
+                "admin",
+                "user",
+                "guest"
+            ],
+            "actions": [
+                "upload files",
+                "use apps",
+                "share screen",
+                "share pointer",
+                "move/resize windows"
+            ],
+            "permissions": {
+                "admin": 31,
+                "user": 31,
+                "guest": 31
+            },
+            "mask": {
+                "upload files": 16,
+                "use apps": 8,
+                "share screen": 4,
+                "share pointer": 2,
+                "move/resize windows": 1
+            },
+            "maskAll": 31
+        }
+    ]
+}

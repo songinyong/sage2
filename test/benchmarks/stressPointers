@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Usage: stressPointers [url] [number of pointers]
+#    stressPointers wss://localhost:443 5
+
+server=$1
+count=$2
+
+for i in `seq 0 ${count}`
+do
+	node randomPointer.js $server &
+	sleep 1
+done
+
+

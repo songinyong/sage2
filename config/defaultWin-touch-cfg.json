@@ -1,0 +1,112 @@
+/*
+	default configuration of the server - Windows
+*/
+{
+	name: "Windows",
+	host: "localhost",
+	port: 9090,
+	index_port: 9292,
+	background: {
+		color: "#333333",
+		image: {
+			url: "images/background/dbgrid.png",
+			style: "tile"
+		},
+		watermark: {
+			svg: "images/EVL-LAVA.svg",
+			color: "rgba(86, 117, 114, 0.9)"
+		}
+	},
+    audio: {
+                initialVolume: 8,
+        },
+	ui: {
+		clock: 12,
+		show_version: false,
+		show_url: true,
+                maxWindowWidth: 8192,
+                maxWindowHeight: 8192,
+                noDropShadow: true
+	},
+	voice_commands: {
+		enabled: true,
+		log: false
+	},
+	resolution: {
+		width: 1920,
+		height: 1080
+	},
+    layout: {
+        rows: 3,
+        columns: 6
+	},
+    displays: [
+        {
+            row: 0,
+            column: 0,
+            width: 6,
+            height: 3
+        }
+    ],
+	alternate_hosts: [
+		"127.0.0.1"
+	],
+	remote_sites: [
+	],
+	dependencies: {
+		ImageMagick: "C:/Program Files/ImageMagick-6.9.3-Q16/",
+		FFMpeg: "C:/Dev/ffmpeg-win64-shared/bin/"
+    },
+	experimental: {
+		omicron: {
+			enable: true,
+			
+			// Port SAGE will listen for a oinputserver connection
+			msgPort: 28000,
+			
+			// If specified, SAGE will actively attempt to connect to
+			// an oinputserver on the specified IP and data port
+			inputServerIP: "localhost",
+			dataPort: 30005,
+			
+			eventDebug: false,
+			
+			enableTouch: true,
+			enableWand: true,
+			enableMocap: true,
+						
+			style: "Touch", // Display as "Touch" or "Pointer"
+			interactionMode: "Window", // "Window" or "App"
+
+			// Touch gestures
+			gestureDebug: false,
+			touchOffset: [ 0, 0 ], // in pixels
+			enableGestures: true,
+			
+			acceleratedDragScale: 1,
+			
+			enableDoubleClickMaximize: true,
+			enableThreeFingerRightClick: false,
+			
+			enableTwoFingerWindowDrag: false,
+			zoomToMoveGestureMinimumDistance: 100,
+			
+			enableTwoFingerZoom: true,
+			zoomGestureScale: 2000,
+			
+			enableFiveFingerCloseApp: true,
+			
+			appsExcludedFromTouchInteraction:
+			[
+				"Webview",
+				"googlemaps",
+				"zoom"
+			],
+
+			// Advanced
+			moveEventLimit: 100,				// if 100, sends 1/100 of move events received
+			enableStuckTouchDetection: true,
+			nonCriticalEventDelay: 10
+		}
+	}
+}

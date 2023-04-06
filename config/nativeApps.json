@@ -1,0 +1,71 @@
+{
+    "applications": [
+        {
+            "name": "pdf_viewer",
+            "types": [
+                "application/pdf"
+            ],
+            "directory": "pdfs"
+        },
+        {
+            "name": "Webview",
+            "types": [
+                "application/url",
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+            ],
+            "directory": "web"
+        },
+        {
+            "name": "image_viewer",
+            "types": [
+                "image/jpeg",
+                "image/webp",
+                "image/png",
+                "image/bmp",
+                "image/x-ms-bmp",
+                "image/gif",
+                "image/heic",
+                "image/tiff",
+                "image/svg",
+                "image/svg+xml",
+                "image/vnd.adobe.photoshop"
+            ],
+            "directory": "images"
+        },
+        {
+            "name": "movie_player",
+            "types": [
+                "video/mp4",
+                "video/x-m4v",
+                "video/x-matroska",
+                "video/x-msvideo",
+                "video/quicktime",
+                "video/webm",
+                "video/youtube"
+            ],
+            "directory": "videos"
+        },
+        {
+            "name": "custom_app",
+            "types": [
+                "application/zip",
+                "application/x-zip-compressed",
+                "application/custom"
+            ],
+            "directory": "apps"
+        },
+        {
+            "name": "media_stream",
+            "types": [
+                "application/stream"
+            ]
+        },
+        {
+            "name": "load_snippet",
+            "types": [
+                "sage2/snippet"
+            ],
+            "directory": "snippets"
+        }
+    ]
+}

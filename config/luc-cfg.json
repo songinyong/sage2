@@ -1,0 +1,44 @@
+{
+	"host": "luc.evl.uic.edu",
+	"port": 9090,
+        "name": "Luc's laptop",
+	"index_port": 9292,
+	"background": {
+		"image": {
+			"url": "images/background/evl1.jpg",
+			"style": "fit"
+		}
+	},
+	"ui": {
+		"clock": 24,
+		"show_url": true,
+		"noDropShadow": true,
+		"show_version": true
+	},
+	"resolution": {
+		"width": 2560,
+		"height": 1600
+	},
+	"layout": {
+		"rows": 1,
+		"columns": 1
+	},
+	"displays": [
+		{
+			"row": 0,
+			"column": 0
+		}
+	],
+	"alternate_hosts": [
+		"localhost",
+		"127.0.0.1"
+	],
+	"remote_sites": [
+		{
+			"name": "Luc s office",
+			"host": "traoumad.evl.uic.edu",
+                        "port": 443,
+			"secure": true
+		}
+	]
+}

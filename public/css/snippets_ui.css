@@ -1,0 +1,1042 @@
+/* ====================================== */
+/* ====== Code Snippets UI Styling ====== */
+/* ====================================== */
+
+#codeSnippetEditor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#codeSnippetEditor .ace_gutter-layer {
+    pointer-events: none;
+}
+
+#codeSnippetEditor.open {
+    pointer-events: initial;
+    /* doing this to eliminate a weird flash on page load */
+    opacity: 1 !important;
+}
+
+#codeSnippetEditor.open .ace_gutter-layer {
+    pointer-events: auto;
+}
+
+#codeSnippetEditor .editorWrapper {
+    height: 90%;
+    width: 80%;
+    max-width: 1250px;
+    background-color: white;
+    border: 2px solid #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    box-shadow: 0 0 50px 5px #0009;
+    overflow: hidden;
+}
+
+#codeSnippetEditor .panel-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    /* margin: 15px;
+    margin-right: 0px; */
+
+    border: 0px solid #999;
+    border-width: 0 1px;
+
+    background: #e0e0e0;
+}
+
+#codeSnippetEditor .panel-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 0 0 32px;
+    width: 100%;
+
+    padding-left: 15px;
+    box-sizing: border-box;
+    
+    background: #eee;
+    border-bottom: 1px solid #999;
+    
+    line-height: 24px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+}
+
+#codeSnippetEditor .panel-title .label {
+    display: inline-flex;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+    color: black;
+    /* font-weight: bold; */
+}
+
+#codeSnippetEditor .panel-content {
+    flex: 1;
+    background: #e0e0e0;
+}
+
+#codeSnippetEditor #snippetListWrapper {
+    flex-basis: 250px;
+
+    /* margin: 15px; */
+    /* margin-right: 0px; */
+}
+
+#codeSnippetEditor #snippetListWrapper .list-content {
+    padding: 5px;
+
+    box-shadow: inset 0 0 5px #aaa;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item {
+    display: flex;
+
+    margin: 5px 0;
+    border-radius: 3px;
+    padding-right: 1px;
+
+    color: white;
+    font-weight: bold;
+
+    box-shadow: 0 0 4px 1px #fff;
+    transition: border-color 0.4s;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.gen {
+    background: #b3e2cd;
+    border: 3px solid;
+    border-color: #87d1b0;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.data {
+    background: #cbd5e8;
+    border: 3px solid #9db0d3;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.draw {
+    background: #fdcdac;
+    border: 3px solid #fba76d;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item .snippet-name {
+    padding: 4px 6px;
+
+    font-size: 16px;
+    color: #333;
+
+    flex: 1;
+    word-break: break-word;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item .action-icons {
+    flex: 0 0 88px;
+    display: flex;
+
+    margin-right: -1px;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item .action-icons i {
+    /* margin: 0 4px; */
+    font-size: 16px;
+    padding: 5px;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-basis: 28px;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #333;
+
+    transition: background 0.4s;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.gen .action-icons i {
+    border: 0px solid #87d1b0;
+    background: #b3e2cd;
+
+    border-left-width: 2px;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.gen i:hover {
+    background: #87d1b0;
+    /* border-color: #b3e2cd; */
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.data .action-icons i {
+    border: 0px solid #9db0d3;
+    background: #cbd5e8;
+
+    border-left-width: 2px;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.data i:hover {
+    background: #9db0d3;
+    /* border-color: #cbd5e8; */
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.draw .action-icons i {
+    border: 0px solid #fba76d;
+    background: #fdcdac;
+
+    border-left-width: 2px;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.draw i:hover {
+    background: #fba76d;
+    /* border-color: #fdcdac; */
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item i:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item i.disabled {
+    cursor: not-allowed;
+    background: #f0f0f0 !important;
+    color: #666;
+
+    border-color: #ccc !important;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.open {
+    /* background: #f0f0f0; */
+
+    border-color: #666;
+    /* border-color: #ccc; */
+    /* box-shadow: 0 0 4px 1px #fff; */
+
+    box-shadow: 0 0 4px #aaa;
+}
+
+#codeSnippetEditor #snippetListWrapper .list-item.open .snippet-name {
+    /* font-weight: bold; */
+
+    color: black;
+}
+
+
+#codeSnippetEditor #snippetLoggingWrapper {
+    display: flex;
+    flex-basis: 350px;
+    flex-direction: column;
+    
+    opacity: 1;
+
+    max-height: 350px;
+    /* margin: 15px; */
+    /* margin-left: 0px; */
+
+    /* transition: flex-basis 0.5s ease 0s, display 0s ease 0.5s, opacity 0.25s ease-in-out 0.25s; */
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-section-wrapper {
+    flex: 1 0;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-section-wrapper:not(:last-of-type) {
+    /* margin-bottom: 5px; */
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-title .log-filter {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    /* margin-right: 10px; */
+    padding-right: 10px;
+    position: relative;
+
+    text-decoration: underline;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#codeSnippetEditor #snippetLoggingWrapper .log-title .log-filter-value::after {
+    content: "\f0dd";
+    font-family: "Font Awesome 5 Free";
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-filter-options {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    min-width: 50px;
+
+    color: #666;
+    border: 1px solid #888;
+    background: #f0f0f0;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-filter:hover .log-filter-options:not(:empty) {
+    display: block;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-filter-options .filter-option {
+    border: 0.25px solid #e0e0e0;
+    cursor: pointer;
+    padding: 2px;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-filter-options .filter-option:hover {
+    background: white;
+    color: #333;
+    border: 0.25px solid #ccc;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-section-wrapper .log-items {
+    flex: 1;
+    box-shadow: inset 0 0 5px #aaa;
+    overflow: auto;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .log-section-wrapper .log-items .message {
+    font-size: 12px;
+/* 
+    white-space: pre-wrap;
+    word-break: break-all; */
+    display: flex;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper .message div {
+    font-family: monospace;
+    padding: 3px;
+}
+
+
+#codeSnippetEditor #snippetLoggingWrapper .message .timestamp {
+    flex: 0 1;
+    word-break: normal;
+    white-space: nowrap;
+    color: gray;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+
+#codeSnippetEditor #snippetLoggingWrapper .message .content {
+    flex: 1;
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding-right: 5px;
+}
+
+
+#codeSnippetEditor #snippetLoggingWrapper .message .source {
+    flex: 0;
+    word-break: normal; 
+    white-space: nowrap;
+    font-style: italic;
+    color: gray;
+}
+
+
+#codeSnippetEditor #snippetLoggingWrapper #errorMessages .message {
+    background: #ffefef;
+    color: red;
+
+    border: 1px solid #eecdcd;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper #errorMessages .message:nth-child(even) {
+    background: #ffe0e0;
+    color: red;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper #consoleMessages .message {
+    background: var(--snippets-base3);
+    color: black;
+
+    border: 1px solid #cdcdcd;
+}
+
+#codeSnippetEditor #snippetLoggingWrapper #consoleMessages .message:nth-child(even) {
+    background: var(--snippets-base2);
+    color: black;
+}
+
+#codeSnippetEditor #reflowWrapper {
+  display: flex;
+  flex: 1;
+  /* height: 100%; */
+
+  align-items: stretch;
+
+  flex-direction: row;
+}
+
+
+/* ===================================== */
+/* ====== Editor Controls Styling ====== */
+/* ===================================== */
+#codeSnippetEditor #snippetEditorTitlebar {
+    display: flex;
+    /* flex: 0 0 30px; */
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    /* height: 30px; */
+    width: 100%;
+
+    padding-left: 15px;
+    line-height: 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: black;
+    border-bottom: 3px solid #6666;
+}
+
+#codeSnippetEditor #snippetEditorTitlebar .controlButton {
+  background: white;
+
+  border-width: 0 0 0 2px;
+  border-color: #ccc;
+}
+
+#codeSnippetEditor #snippetEditorTitlebar .controlButton:hover {
+  background: #e0e0e0;
+}
+
+#codeSnippetEditor #snippetEditorControls {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    /* flex: 0 0; */
+
+    /* height: 45px; */
+    /* margin: 5px 0; */
+}
+
+#codeSnippetEditor .controlRow {
+    /* position: absolute; */
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    /* height: 35px; */
+    background: #eee;
+    box-sizing: border-box;
+    padding: 2px;
+    /* border: 1.25px solid white; */
+    border-bottom: 2.25px solid rgba(100, 100, 100, 0.25);
+}
+
+@media (max-width: 785px) {
+    #codeSnippetEditor .controlRow {
+        justify-content: start;
+    }
+}
+
+
+#codeSnippetEditor .control {
+    box-sizing: border-box;
+    /* padding: 8px; */
+    height: 30px;
+    margin: 2px 5px;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: stretch;
+}
+
+#codeSnippetEditor .control.right {
+    justify-self: flex-end;
+}
+
+#codeSnippetEditor .controlButton {
+    box-sizing: border-box;
+    background: #ddd;
+    border: 1.25px solid rgba(100, 100, 100, 0.25);
+    padding: 8px;
+    cursor: pointer;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+/* reset size for fontawesome icons */
+#codeSnippetEditor .controlButton.fa-2x {
+    font-size: 2em;
+}
+
+#codeSnippetEditor .controlButton:hover {
+    background: #ccc;
+    color: white;
+    border: 1.25px solid rgba(100, 100, 100, 0.5);
+}
+
+#codeSnippetEditor .controlButton.disabled {
+    background-color: #eee;
+    color: #aaa;
+    /* border-color: rgba(225, 225, 225, 0.5); */
+    pointer-events: none;
+}
+
+#codeSnippetEditor .controlDropdown:after {
+    content: "\f0dd";
+    font-family: "Font Awesome 5 Free";
+    margin: 0 0 5px 5px;
+    font-weight: 900;
+}
+
+#codeSnippetEditor .dropdownWrapper {
+    position: relative;
+    display: inline-block;
+    /* margin-right: 10px; */
+}
+
+#codeSnippetEditor .dropdownOptionList {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    
+    background: white;
+    border: 1px solid gray;
+    text-align: center;
+
+    box-shadow: 0 0 7px #333a;
+
+    /* Turning on overflow breaks submenus... */
+    /* overflow-y: auto;
+    max-height: 400px; */
+}
+
+#codeSnippetEditor .dropdownOptionList.left {
+    left: 0;
+}
+
+#codeSnippetEditor .dropdownOptionList.right {
+    right: 0;
+}
+
+#codeSnippetEditor .dropdownOptionList.right .dropdownOption {
+    text-align: right;
+}
+
+#codeSnippetEditor .dropdownOption > .dropdownOptionList {
+    top: 0;
+    margin-top: -2px;
+}
+
+#codeSnippetEditor .dropdownOption > .dropdownOptionList.left {
+    left: 100%;
+}
+
+#codeSnippetEditor .dropdownOption > .dropdownOptionList.right {
+    right: 100%;
+}
+
+#codeSnippetEditor .dropdownWrapper:hover > .dropdownOptionList {
+    display: initial;
+}
+
+
+#codeSnippetEditor .dropdownOption {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    
+    /* padding: 7px 10px 7px 15px; */
+    padding: 3px 5px;
+    padding-left: 12px;
+
+    border: 0.5px solid rgba(100, 100, 100, 0.25);
+    border-width: 1px 0 1px 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+#codeSnippetEditor .dropdownOption span {
+    pointer-events: none;
+}
+
+#codeSnippetEditor .dropdownOption .colorBadge {
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-right: 2px solid white;
+}
+
+#codeSnippetEditor .dropdownOption:hover {
+    background-color: lightgray;
+}
+
+#codeSnippetEditor .dropdownOption:hover > .dropdownOptionList {
+    display: initial;
+}
+
+#codeSnippetEditor #loadSnippetOptions .dropdownOption.loaded {
+    background: #c7e9c0;
+}
+
+#codeSnippetEditor #loadSnippetOptions .dropdownOption.locked {
+    background-color: #eee;
+    color: gray;
+    cursor: copy;
+}
+
+#codeSnippetEditor #loadSnippetOptions .dropdownOption.locked span {
+    color: gray;
+    font-style: italic;
+}
+
+#codeSnippetEditor #loadSnippetOptions .dropdownOption.loaded:hover {
+    background-color: #a1d99b;
+}
+
+#codeSnippetEditor #snippetDescription {
+    float: left;
+    background-color: #eee;
+    border: 1.25px solid rgba(100, 100, 100, 0.25);
+    padding: 5px;
+    font-size: 16px;
+    width: 150px;
+}
+
+#codeSnippetEditor #snippetEditorHide {
+}
+
+#codeSnippetEditor #snippetEditorClose {
+}
+
+#codeSnippetEditor #snippetEditorClose.unsaved {
+    color: red;
+    /* #eecdcd
+    #ffe0e0 */
+    background: #ffe0e0;
+    /* background: linear-gradient(#e79e9e, #ffe0e0 50%, #e79e9e 90%); */
+}
+
+#codeSnippetEditor #snippetEditorClose:hover.unsaved {
+    background: #e79e9e;
+    /* background: linear-gradient(#ffe0e0, #e79e9e 50%, #ffe0e0 90%); */
+    color: white;
+}
+
+#codeSnippetEditor #exportProject {
+    /* margin-right: 8px; */
+}
+
+#codeSnippetEditor #exportProject div {
+    font-family: Arimo, Helvetica, sans-serif;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 4px;
+    display: inline-block;
+}
+
+#codeSnippetEditor #createNewScriptWrapper {
+    display: block;
+}
+
+.drawSnippetColor {
+    background-color: #fdcdac;
+}
+
+.drawSnippetColor:hover {
+    background-color: #fba76d;
+    color: white;
+}
+
+.dataSnippetColor {
+    background-color: #cbd5e8;
+}
+
+.dataSnippetColor:hover {
+    background-color: #9db0d3;
+    color: white;
+}
+
+.genSnippetColor {
+    background-color: #b3e2cd;
+}
+
+.genSnippetColor:hover {
+    background-color: #87d1b0;
+    color: white;
+}
+
+
+#codeSnippetEditor .title-control .controlButton {
+    padding: 0px 4px;
+    border-width: 0 1px;
+
+    color: #333;
+}
+
+#codeSnippetEditor .title-control.control {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    height: 100%;
+
+    align-items: stretch;
+    margin: 0;
+}
+
+/* ============================ */
+/* ===== Overlay Styling ====== */
+/* ============================ */
+
+
+#snippetsOverlayWrapper {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    margin: 2px 0 0 2px;
+
+    z-index: 800;
+
+    cursor: none;
+}
+
+#snippetsOverlay {
+    width: 100%;
+    height: 100%;
+}
+
+#snippetsOverlay .snippetAppOverlay {
+    fill: #e0e0e0;
+    stroke: #333;
+    stroke-width: 2px;
+}
+
+#snippetsOverlay .snippetAppHighlighted .snippetAppOverlay {
+    fill: #fff;
+    stroke: black;
+}
+
+#snippetsOverlay .snippetAppTitlebar {
+    fill: #888;
+    stroke: #333;
+    stroke-width: 2px;
+}
+
+#snippetsOverlay .snippetAppTitle {
+    fill: white;
+    font-weight: bold;
+}
+
+#snippetsOverlay .snippetAppHighlighted .snippetAppTitlebar {
+    fill: #aaa;
+    stroke: black;
+}
+
+#snippetsOverlay .snippetDragStartTarget .snippetAppOverlay {
+    stroke: #444;
+    stroke-width: 4px;
+}
+
+#snippetsOverlay .snippetLinkOverlay {
+    stroke: black;
+    stroke-width: 6;
+    opacity: 1;
+    stroke-linecap: round;
+}
+
+#snippetsOverlay .snippetAppCreationType {
+    stroke-width: 2px;
+}
+
+#snippetsOverlay .snippetsDragInteractionLine {
+    stroke-linecap: round;
+    stroke-width: 5px;
+
+    stroke-linejoin: round;
+
+    opacity: 0.75;
+
+    pointer-events: none;
+}
+
+
+#snippetsOverlay .snippetsDragInteractionTarget {
+    opacity: 0.5;
+
+    pointer-events: none;
+    stroke-width: 5px;
+}
+
+#snippetsOverlay .snippetsInteractionCursor {
+    pointer-events: none;
+}
+
+
+/* ============================ */
+/* ====== Editor Styling ====== */
+/* ============================ */
+
+#codeSnippetEditor #snippetEditor {
+    flex: 1 0;
+
+    /* height: calc(100% - 100px); */
+    /* margin: 15px; */
+    box-sizing: border-box;
+    /* border-radius: 0 0 10px 10px; */
+}
+
+#codeSnippetEditor #snippetEditorWrapper {
+    /* flex-basis: 500px; */
+
+    flex: 1;
+
+    /* margin: 15px; */
+    /* border-radius: 0 0 10px 10px; */
+}
+
+#codeSnippetEditor #snippetEditorWrapper .ace-monokai {
+  background-color: #272822;
+  color: #F8F8F2;
+}
+
+#codeSnippetEditor #editorContentWrapper {
+    display: flex;
+    flex: 1 0;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#codeSnippetEditor .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65)
+}
+
+/* override the span and * selectors for inside ace editor... */
+.ace_editor * {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
+    
+    /* this is accompanied by an editor init option for line height, etc. */
+    font-size: 16px;
+}
+
+.ace_editor span {
+    color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  /* #codeSnippetEditor #snippetLoggingWrapper {
+    flex-basis: 0px;
+    display: none;
+    opacity: 0;
+  } */
+
+  #codeSnippetEditor #reflowWrapper {
+    flex-direction: column;
+  }
+
+  #codeSnippetEditor #snippetLoggingWrapper {
+    flex-direction: row;
+    flex-basis: 275px;
+  }
+}
+/* ======================================= */
+/* == Code Snippets JSON logger Styling == */
+/* ======================================= */
+
+/* .json-summary {
+    font-family: monospace;
+}
+
+.json-summary-checkbox {
+  display: inline;
+  position: relative;
+  cursor: pointer;
+  
+  padding-left: 10px;
+  margin-left: 2px;
+  white-space: nowrap;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.json-summary-checkbox>input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.json-summary-checkboxmarker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  height: 10px;
+  width: 10px;
+
+  line-height: 10px;
+  text-align: center;
+
+  color: var(--snippets-base1);
+  border: 1px solid var(--snippets-base1);
+}
+
+.json-summary-checkboxmarker::before {
+    content: "+";
+}
+
+.json-summary-checkbox.checked>.json-summary-checkboxmarker::before {
+    content: "–";
+}
+
+.json-summary-layer {
+    display: inline;
+}
+
+.json-summary-layer>.json-summary-keys {
+    display: none;
+    color: var(--snippets-red);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.json-summary-layer>.json-summary-child {
+    display: none;
+}
+
+.json-summary-checkbox.checked+.json-summary-layer>.json-summary-child {
+    display: inline;
+}
+
+.json-summary-checkbox.checked+.json-summary-layer>.json-summary-keys {
+    display: none;
+}
+
+.json-summary-type {
+    cursor: help;
+    color: var(--snippets-cyan);
+}
+
+.json-summary-type.json-summary-type-string {
+	color: var(--snippets-green);
+}
+
+.json-summary-value {
+    display: none;
+    color: var(--snippets-base01);
+
+    margin-left: 4px;
+    font-style: italic;
+}
+
+.json-summary-value.json-summary-value::before {
+	content: "(";
+}
+
+.json-summary-value.json-summary-value::after {
+	content: ")";
+}
+
+.json-summary-value.json-summary-value-string::before {
+	content: "('";
+}
+
+.json-summary-value.json-summary-value-string::after {
+	content: "')";
+}
+
+.json-summary-type:hover + .json-summary-value {
+    display: inline;
+}
+
+.json-summary-name {
+	color: var(--snippets-red);
+}
+
+.json-summary-length {
+	color: var(--snippets-blue);
+}
+
+.json-summary-circular {
+	color: var(--snippets-violet);
+} */
+
+#consoleMessages .json-summary-wrapper {
+    border-width: 0 !important;
+}
+
+#consoleMessages .json-summary-bar, #consoleMessages .json-summary-percentage {
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+:root {
+    /* using colors from the solarized light theme */
+    --snippets-base03:    #002b36;
+    --snippets-base02:    #073642;
+    --snippets-base01:    #586e75;
+    --snippets-base00:    #657b83;
+    --snippets-base0:     #839496;
+    --snippets-base1:     #93a1a1;
+    --snippets-base2:     #eee8d5;
+    --snippets-base3:     #fdf6e3;
+    --snippets-yellow:    #b58900;
+    --snippets-orange:    #cb4b16;
+    --snippets-red:       #dc322f;
+    --snippets-magenta:   #d33682;
+    --snippets-violet:    #6c71c4;
+    --snippets-blue:      #268bd2;
+    --snippets-cyan:      #2aa198;
+    --snippets-green:     #859900;
+}

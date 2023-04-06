@@ -1,0 +1,78 @@
+{
+	name: "Tommy",
+	host: "localhost",
+	port: 9292,
+	secure_port: 9090,
+	background: {
+		color: "#AA3311",
+		image: {
+			url: "images/background/marble_tiles.jpg",
+			style: "tile"
+		},
+		watermark: {
+			svg: "images/EVL-logo.svg",
+			color: "rgba(255, 255, 255, 0.75)"
+		},
+		clip: false
+	},
+	ui: {
+		clock: 12,
+		show_url: true,
+		show_version: true,
+		menubar: {
+			backgroundColor: "rgba(12, 15, 40, 0.5)",
+			textColor: "rgba(235, 230, 175, 1.0)",
+			remoteConnectedColor: "#61ADE2",
+			remoteDisconnectedColor: "#647295"
+		}
+	},
+	resolution: {
+		width: 1680,
+		height: 840
+	},
+	layout: {
+		rows: 1,
+		columns: 1
+	},
+	displays: [
+		{
+			row: 0,
+			column: 0
+		}
+	],
+	alternate_hosts: [
+		"127.0.0.1"
+	],
+	remote_sites: [
+		{
+			name: "IceWall",
+			host: "thor.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Cyber-Commons",
+			host: "inferno.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "CAVE2",
+			host: "lyra.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Green Room",
+			host: "mesaverde.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "PhD Room",
+			host: "dante.evl.uic.edu",
+			port: 443,
+			secure: true
+		}
+	]
+}

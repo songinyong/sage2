@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head lang="en">
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>SAGE2: Display</title>
+
+<script type="text/license">
+	// SAGE2 is available for use under the SAGE2 Software License
+	//
+	// University of Illinois at Chicago's Electronic Visualization Laboratory (EVL)
+	// and University of Hawai'i at Manoa's Laboratory for Advanced Visualization and
+	// Applications (LAVA)
+	//
+	// See full text, terms and conditions in the LICENSE.txt included file
+	//
+	// Copyright (c) 2014
+</script>
+
+<!-- CSS style -->
+<link rel="stylesheet" type="text/css" href="lib/prism.css"/>
+<link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/snippetinput.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/summarizer.css" />
+<!-- Code highlighting -->
+<link href="css/prism.css" rel="stylesheet" />
+
+<!-- Hide the module object to load regular JS libs -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- External dependencies -->
+<script src="lib/pdf.js"></script>
+<script src="lib/snap.svg-min.js"></script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/prism.js"></script>
+
+<script src="lib/prism.js" data-manual></script>
+<script src="lib/markdown-it.min.js"></script>
+<script src="lib/markdown-it-math.min.js"></script>
+
+<script>
+	window.md = markdownit({
+		html: true,
+		xhtmlOut: true,
+		breaks: true,
+		typographer: true
+	}).use(markdownitMath)
+</script>
+
+<!-- Put the module object back -->
+<script>if (window.module) module = window.module;</script>
+
+<script src="lib/glMatrix-0.9.5.min.js"></script>
+<script src="lib/moment.min.js"></script>
+<script async src="lib/json-summary.min.js"></script>
+
+<!-- SAGE2 code -->
+<script src="src/websocket.io.js"></script>
+<script src="src/SAGE2_runtime.js"></script>
+<script src="src/DynamicImage.js"></script>
+<script src="src/Class.js"></script>
+<script src="src/SAGE2_App.js"></script>
+<script src="src/SAGE2_WebGLApp.js"></script>
+<script src="src/SAGE2_BlockStreamingApp.js"></script>
+
+<script async src="src/image_viewer.js"></script>
+<script async src="src/movie_player.js"></script>
+<script async src="src/pdf_viewer.js"></script>
+<script async src="src/media_stream.js"></script>
+<script async src="src/SAGE2_webrtc.js"></script> <!-- webrtc test -->
+<script async src="src/media_block_stream.js"></script>
+<script async src="src/ui_builder.js"></script>
+<script async src="src/pointer.js"></script>
+<script async src="src/SAGE2_WidgetButtonTypes.js"></script>
+<script async src="src/SAGE2_WidgetControl.js"></script>
+<script async src="src/SAGE2_WidgetControlInstance.js"></script>
+<script async src="src/widgetHelperFunctions.js"></script>
+<script async src="src/radialMenu.js"></script>
+<script async src="src/SAGE2_DataSharing.js"></script>
+<script async src="src/SAGE2_Display.js"></script>
+<script async src="src/SAGE2_MouseEventPassing.js"></script>
+
+<script async src="src/SAGE2_Partition.js"></script>
+
+<script async src="src/VisSnippets/CodeSnippetInput.js"></script>
+<script async src="src/VisSnippets/SAGE2_SnippetsAPI.js"></script>
+<script async src="src/VisSnippets/SAGE2_SnippetsUtil.js"></script>
+<script async src="src/VisSnippets/SAGE2_CodeSnippets.js"></script>
+<script async src="src/VisSnippets/SAGE2_SnippetCompiler.js"></script>
+
+<script async src="src/SAGE2_RemoteSitePointer.js"></script>
+<script async src="src/SAGE2_remoteSiteInfo.js"></script>
+
+</head>
+
+<body>
+	<div id="background">
+		<div id="main">
+			<!-- the rest is built programmatically by the uiBuilder -->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pkill -9 electron
+
+
+server="https://traoumad.evl.uic.edu"
+
+npx electron $PWD/electron.js -s $server -a &
+sleep 1
+npx electron $PWD/electron.js -f -d 0 -m 0  -x 0 -y 0 --width 3840 --height 1080 -s $server &
+

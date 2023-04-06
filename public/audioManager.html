@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SAGE2: Audio Manager</title>
+
+<script type="text/license">
+	// SAGE2 is available for use under the SAGE2 Software License
+	//
+	// University of Illinois at Chicago's Electronic Visualization Laboratory (EVL)
+	// and University of Hawai'i at Manoa's Laboratory for Advanced Visualization and
+	// Applications (LAVA)
+	//
+	// See full text, terms and conditions in the LICENSE.txt included file
+	//
+	// Copyright (c) 2014
+</script>
+
+<!-- CSS style -->
+<link rel="stylesheet" type="text/css" href="css/style_audio.css"/>
+
+<!-- External dependencies -->
+<script src="lib/soundjs-0.6.2.min.js"></script>
+
+<!-- SAGE2 code -->
+<script async src="src/websocket.io.js"></script>
+<script async src="src/SAGE2_runtime.js"></script>
+<script async src="src/SAGE2_AudioManager.js"></script>
+
+
+</head>
+
+<body>
+
+	<header>
+		<h1>SAGE2 Audio Manager</h1>
+	</header>
+
+	<main>
+		<section id="allvideos" class="siteType">
+			<h2>Video streams</h2>
+			<div id="main">
+				<table id="videos">
+					<tr>
+						<th class="videoIcon" align="center">Video</td>
+						<th class="videoTitle" align="center"><strong>Name</strong></td>
+						<th class="videoTime" align="center"><strong>Time</strong></td>
+						<th class="videoVolumeMute" align="center"><strong>Output</strong></td>
+						<th class="videoPlay" align="center"><strong>Play/Pause</strong></td>
+					</tr>
+				</table>
+			</div>
+
+		</section>
+
+	</main>
+
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+open -a Terminal /Applications/SAGE2/GO-server
+
+sleep 3
+
+# create folder to store chrome sessions
+/bin/rm -fr /Applications/SAGE2/chrome/
+mkdir -p /Applications/SAGE2/chrome/audio
+mkdir -p /Applications/SAGE2/chrome/display1
+
+binary=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+
+# main parameters
+global_param="--args --new-window --disable-popup-blocking --no-first-run --use-gl --enable-accelerated-compositing --allow-file-access-from-files --disable-session-crashed-bubble --allow-running-insecure-content"
+
+# start the audio manager
+param="$global_param --user-data-dir=/Applications/SAGE2/chrome/audio"
+"$binary" $param --window-size=950,250 --window-position=0,0 --app=http://localhost:9292/audioManager.html  &
+
+sleep 1
+
+# start one display node
+param="$global_param --user-data-dir=/Applications/SAGE2/chrome/display1"
+"$binary" $param --window-size=1280,720 --window-position=0,290 --app=http://localhost:9292/display.html\?clientID=0  &
+
+sleep 1
+
+# start the UI in regular chrome instance
+"$binary" --new-window https://localhost:9090/  &

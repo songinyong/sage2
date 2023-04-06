@@ -1,0 +1,33 @@
+{
+  "name": "SAGE2_client",
+  "version": "5.0.0",
+  "description": "Electron-based SAGE2 client",
+  "main": "electron.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/sage2/sage2/"
+  },
+  "dependencies": {
+    "commander": "^9",
+    "systeminformation": "latest"
+  },
+  "devDependencies": {
+    "electron": "^10",
+    "electron-packager": "^15"
+  },
+  "optionalDependencies": {
+    "electron-installer-dmg": "latest",
+    "electron-winstaller": "latest",
+    "electron-squirrel-startup": "latest",
+    "electron-installer-redhat": "latest",
+    "electron-installer-debian": "latest"
+  },
+  "scripts": {
+    "electron": "electron electron.js -s https://localhost:9090 -d -1",
+    "build_mac": "build_mac",
+    "build_win": "build_win.bat",
+    "build_lnx": "build_lnx"
+  },
+  "author": "Luc Renambot <renambot@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE.txt"
+}

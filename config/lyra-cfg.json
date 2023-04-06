@@ -1,0 +1,186 @@
+/*
+	Configuration for CAVE2
+*/
+{
+	name: "CAVE2",
+	host: "lyra.evl.uic.edu",
+	port: 443,
+	index_port: 80,
+	url: "http://bit.do/cave2",
+	background: {
+		color: "#333333",
+		image: {
+			url: "images/background/chicago-pano-october-CAVE2.jpg",
+			style: "tile"
+		},
+                watermark: {
+                        svg: "images/EVL-logo.svg",
+                        color: "rgba(25, 25, 255, 0.25)"
+                },
+		clip: true
+	},
+	ui: {
+		clock: 24,
+		show_url: true,
+		show_version:  true,
+                noDropShadow:    true,
+		minWindowWidth:  500,
+		minWindowHeight: 500,
+		auto_hide_ui: true,
+		auto_hide_delay: 60,
+	},
+	resolution: {
+		width: 1366,
+		height:  3072
+	},
+	// for experimental features: true/false
+	experimental: {
+		omicron: // enable omicron input module
+		{
+			// Standard 'SAGE' connection
+			// SAGE listens for a sageinputserver to stream events
+			enable: false,
+			dataPort: 30015,
+			
+			// Additional 'CAVE2' type connection
+			// SAGE connects to an oinputserver to get events
+			useOinputserver: true,
+			inputServerIP: "cave2tracker.evl.uic.edu",
+			msgPort: 28000
+		}
+	},
+	layout: {
+		rows: 1,
+		columns: 18
+	},
+	displays: [
+		{
+			row: 0,
+			column: 0
+		},
+		{
+			row: 0,
+			column: 1
+		},
+		{
+			row: 0,
+			column: 2
+		},
+		{
+			row: 0,
+			column: 3
+		},
+		{
+			row: 0,
+			column: 4
+		},
+		{
+			row: 0,
+			column: 5
+		},
+		{
+			row: 0,
+			column: 6
+		},
+		{
+			row: 0,
+			column: 7
+		},
+		{
+			row: 0,
+			column: 8
+		},
+		{
+			row: 0,
+			column: 9
+		},
+		{
+			row: 0,
+			column: 10
+		},
+		{
+			row: 0,
+			column: 11
+		},
+		{
+			row: 0,
+			column: 12
+		},
+		{
+			row: 0,
+			column: 13
+		},
+		{
+			row: 0,
+			column: 14
+		},
+		{
+			row: 0,
+			column: 15
+		},
+		{
+			row: 0,
+			column: 16
+		},
+		{
+			row: 0,
+			column: 17
+		}
+	],
+	alternate_hosts: [
+		"localhost",
+		"127.0.0.1",
+		"131.193.183.210",
+		"10.0.8.200",
+		"lyra.evlrn.uic.edu",
+		"lyra.evl.optiputer.net"
+	],
+	remote_sites: [
+		{
+			name: "Cyber-Commons",
+			host: "inferno.evl.uic.edu",
+			port: 443,
+			secure: true,
+			password: "evl123"
+		},
+		{
+			name: "LAVA",
+			host: "pele.manoa.hawaii.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "CAVE2 Column",
+			host: "preeka.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "BackWall",
+			host: "orion.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "PhD Room",
+			host: "dante.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Green Room",
+			host: "mesaverde.evl.uic.edu",
+			port: 443,
+			secure: true
+		}
+	],
+        // list of extra folders for assets and apps
+        folders: [
+                {
+                        name: "extras",
+                        url: "/extras",
+                        path: "/iridium_SSD/evldemo/extras/",
+                        upload: false
+                }
+	]
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 512 512"
+   version="1.1"
+   sodipodi:docname="graycircle-codeeditor.svg"
+   inkscape:version="0.92.2 (unknown)">
+  <metadata
+     id="metadata135">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>graycircle-webview</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3066"
+     inkscape:window-height="1689"
+     id="namedview133"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="181.22157"
+     inkscape:cy="309.04391"
+     inkscape:window-x="134"
+     inkscape:window-y="55"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs116">
+    <style
+       id="style114">.cls-1{fill:#787878;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title118">graycircle-webview</title>
+  <circle
+     class="cls-1"
+     cx="256"
+     cy="256"
+     r="256"
+     id="circle120" />
+  <path
+     class="cls-2"
+     d="M64.21,114.61V402.35a8.87,8.87,0,0,0,8.87,8.87H440.92a8.87,8.87,0,0,0,8.87-8.87V108.65a8.87,8.87,0,0,0-8.87-8.87H79A14.87,14.87,0,0,0,64.21,114.61Zm101.32,13c8.43,15.64-6,30-21.59,21.59a7.67,7.67,0,0,1-3.08-3.08c-8.43-15.64,6-30,21.59-21.59A7.67,7.67,0,0,1,165.52,127.6Zm44.49,0c8.43,15.64-6,30-21.59,21.59a7.67,7.67,0,0,1-3.08-3.08c-8.43-15.64,6-30,21.59-21.59A7.67,7.67,0,0,1,210,127.6ZM93.87,173.93H420.13V381.56H93.87V173.93Zm2.49-27.82c-8.43-15.64,6-30,21.59-21.59A7.67,7.67,0,0,1,121,127.6c8.43,15.64-6,30-21.59,21.59A7.67,7.67,0,0,1,96.36,146.11Z"
+     id="path122" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="256.05209"
+     y="307.76834"
+     id="text4674"><tspan
+       sodipodi:role="line"
+       x="256.05209"
+       y="307.76834"
+       id="tspan4672"><tspan
+         x="256.05209"
+         y="307.76834"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:106.66667175px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         id="tspan4670">{.js}</tspan></tspan></text>
+</svg>

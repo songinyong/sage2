@@ -1,0 +1,142 @@
+{
+	name: "UCSD Vroom",
+	host: "vroomsage.ucsd.edu",
+	port: 443,
+	index_port: 80,
+	background: {
+		image: {
+			url: "images/background/chicago-pano-october-VROOM.jpg",
+			style: "stretch"
+		},
+		watermark: {
+			svg: "images/EVL-LAVA.svg",
+			color: "rgba(55, 55, 55, 0.3)"
+		},
+		clip: true
+	},
+	ui: {
+		clock: 24,
+		show_url: true,
+		show_version: false,
+		maxWindowWidth : 16384,
+		maxWindowHeight : 8192,
+		noDropShadow: true,
+		titleBarHeight: 75,
+		titleTextSize:  60,
+		pointerSize:   220,
+		widgetControlSize: 60
+	},
+	resolution: {
+		width: 3840,
+		height: 1080
+	},
+	layout: {
+		rows: 4,
+		columns: 4
+	},
+	displays: [
+		{
+			row: 3,
+			column: 0
+		},
+		{
+			row: 2,
+			column: 0
+		},
+		{
+			row: 3,
+			column: 1
+		},
+		{
+			row: 2,
+			column: 1
+		},
+		{
+			row: 3,
+			column: 2
+		},
+		{
+			row: 2,
+			column: 2
+		},
+		{
+			row: 3,
+			column: 3
+		},
+		{
+			row: 2,
+			column: 3
+		},
+		{
+			row: 1,
+			column: 0
+		},
+		{
+			row: 0,
+			column: 0
+		},
+		{
+			row: 1,
+			column: 1
+		},
+		{
+			row: 0,
+			column: 1
+		},
+		{
+			row: 1,
+			column: 2
+		},
+		{
+			row: 0,
+			column: 2
+		},
+		{
+			row: 1,
+			column: 3
+		},
+		{
+			row: 0,
+			column: 3
+		}
+	],
+	alternate_hosts: [ 
+		"localhost",
+		"vroomsage.local",
+		"vroomsage.calit2.net",
+		"67.58.54.5",
+		"137.110.116.15"
+	],
+	remote_sites: [
+		{
+			name: "CAVE2",
+			host: "lyra.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "LAVA",
+			host: "canoe-lava-2.manoa.hawaii.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "IceWall",
+			host: "thor.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "PhD Room",
+			host: "dante.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Green Room",
+			host: "mesaverde.evl.uic.edu",
+			port: 443,
+			secure: true
+		}
+	]
+}

@@ -1,0 +1,113 @@
+{
+	name: "Endeavour",
+	host: "nishimoto.evl.uic.edu",
+	port: 9292,
+	secure_port: 9090,
+	background: {
+		image: {
+			url: "user/images/background/kamping_icewall_half_fullColor.jpg",
+			style: "tile"
+		},
+	},
+    audio: {
+		initialVolume: 8,
+    },
+	ui: {
+		clock: 12,
+		show_version: false,
+		show_url: true,
+        maxWindowWidth: 8192,
+        maxWindowHeight: 8192,
+        noDropShadow: true,
+		auto_scale_ui: true,
+		calculate_viewing_distance: false
+	},
+	dimensions: {
+		// dimensions of one tile (can be overriden in displays section)
+		tile_width:  2.584,  // in meter, pixel area
+		tile_height: 1.093,  // in meter, pixel area
+		tile_borders: [ 0.004, 0.002, 0.002, 0.004 ], // mullions in meter, left, right, bottom, top
+		// prefered or common viewing distance to calculate UI sizes
+		viewing_distance: 0.97	// in meter
+	},
+	resolution: {
+		width: 1536,
+		height: 1366
+	},
+	layout: {
+		rows: 1,
+		columns: 2
+	},
+	displays: [
+		{
+			row: 0,
+			column: 0
+		},
+		{
+			row: 0,
+			column: 1
+		}
+	],
+	alternate_hosts: [
+		"127.0.0.1",
+		"localhost"
+	],
+	remote_sites: [
+		{
+			name: "CAVE2",
+			host: "lyra.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "CAVE2 Column",
+			host: "preeka.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "Cyber-Commons",
+			host: "inferno.evl.uic.edu",
+			port: 443,
+			secure: true
+		},
+		{
+			name: "IceWall Left",
+			host: "thor.evl.uic.edu",
+			port: 6272,
+			secure: true
+		}
+	],
+	experimental: {
+		omicron: {
+			enable: true,
+			
+			// Port SAGE will listen for a oinputserver connection
+			msgPort: 28000,
+			
+			// If specified, SAGE will actively attempt to connect to
+			// an oinputserver on the specified IP and data port
+			inputServerIP: "131.193.76.121",
+			dataPort: 30005,
+			
+			eventDebug: false,
+			
+			enableTouch: true,
+			enableMocap: false,
+			enableWand: false,
+			
+			style: "Touch", // Display as "Touch" or "Pointer"
+			interactionMode: "App", // "Window" or "App"
+
+			// Touch gestures
+			touchOffset: [ 12, 5 ], // in pixels
+			zoomGestureScale: 2000,
+			acceleratedDragScale: 3,
+			gestureDebug: false
+		}
+	},
+	dependencies: {
+		ImageMagick: "",
+		FFMpeg: ""
+    }
+}

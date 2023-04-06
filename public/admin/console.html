@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>SAGE2 console</title>
+
+<script type="text/license">
+	// SAGE2 is available for use under the SAGE2 Software License
+	//
+	// University of Illinois at Chicago's Electronic Visualization Laboratory (EVL)
+	// and University of Hawai'i at Manoa's Laboratory for Advanced Visualization and
+	// Applications (LAVA)
+	//
+	// See full text, terms and conditions in the LICENSE.txt included file
+	//
+	// Copyright (c) 2014-15
+</script>
+
+<script src="../src/websocket.io.js"></script>
+<script src="../src/SAGE2_runtime.js"></script>
+<script src="SAGE2_console.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+</head>
+
+<body onload="SAGE2_init()">
+
+	<header>
+		<h1>SAGE2 console</h1>
+	</header>
+
+	<main>
+
+		<section class="siteType">
+			<h2>SAGE console messages</h2>
+			<pre id="terminal" class="mycode" style="height:40em;"></pre>
+			<input id="command" class="commandline" type="text" name="command" value="" autofocus>
+		</section>
+
+		<section class="siteType">
+			<p>Type commands in the above text box (help, for a list of commands)</p>
+		</section>
+
+	</main>
+
+</body>
+</html>
+

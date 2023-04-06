@@ -1,0 +1,20 @@
+{
+  "main_script": "Snippets_View.js",
+  "icon": "Snippets_View.png",
+  "width": 500,
+  "height": 500,
+  "resize": "free",
+  "animation": false,
+  "dependencies": [],
+  "load": {
+    "snippetsID": null,
+    "inputsOpen": false
+  },
+  "removeFromLauncher": true,
+  "title": "Snippets View",
+  "version": "1.0.0",
+  "description": "SAGE2 Code Snippets View App",
+  "keywords": ["sage2", "data", "visualization", "code", "snippets"],
+  "author": "Andrew Burks <aburks3@uic.edu>",
+  "license": "SAGE2-Software-License"
+}
