@@ -63,7 +63,7 @@
 		"jszip": "^3",
 		"mime": "^3",
 		"mv": "^2",
-		"node-demux": "git+https://github.com/songinyong/node-demux-sage2",
+		"node-demux": "https://github.com/songinyong/node-demux-sage2",
 		"node-json-db": "1.4.1",
 		"node-pre-gyp": "latest",
 		"normalizeurl": "^1",
