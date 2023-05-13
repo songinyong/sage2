@@ -190,7 +190,6 @@ app.commandLine.appendSwitch("autoplay-policy", "no-user-gesture-required");
 // Remove the limit on the number of connections per domain
 //  the usual value is around 6
 const url = require('url');
-console.log('ss:'+ electron.screen.getAllDisplays());
 console.log('SERVER', commander.server);
 var parsedURL = url.parse(commander.server);
 // default domais are local
